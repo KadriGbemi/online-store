@@ -31,9 +31,6 @@
               </h2>
               {{ product.description }}
             </v-card-text>
-
-            <v-divider class="mx-4" />
-
             <v-card-actions>
               <v-spacer />
 

@@ -4,20 +4,7 @@
     color="teal"
     dark
   >
-    <h2> STOREAPI</h2>
-    <!--
-    <v-autocomplete
-      v-model="select"
-      :search-input.sync="searchInput"
-      :items="searchItems"
-      cache-items
-      class="mx-4"
-      rounded
-      hide-no-data
-      hide-details
-      label="Search available products"
-      solo-inverted
-    /> -->
+    <h5> STOREAPI</h5>
     <v-autocomplete
       v-model="select"
       :loading="isLoading"
@@ -25,6 +12,8 @@
       :search-input.sync="searchInput"
       cache-items
       class="mx-4"
+      dense
+      min-width="50%"
       rounded
       hide-no-data
       hide-details
@@ -36,7 +25,9 @@
         color="green"
         content="6"
       >
-        <v-icon>mdi-open-in-new</v-icon>
+        <v-icon @click="displayCartDrawer">
+          mdi-open-in-new
+        </v-icon>
       </v-badge>
     </v-tab>
   </v-app-bar>
