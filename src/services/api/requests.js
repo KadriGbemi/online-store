@@ -19,22 +19,3 @@ export function getAllProducts() {
   });
 }
 
-export async function updateProduct(productId) {
-  return handleAPIRequest({
-    method: "PUT",
-    url: productId,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-}
-
-export function deleteProduct(productId) {
-  return handleAPIRequest({
-    method: "DELETE",
-    url: productId,
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-}

@@ -14,6 +14,7 @@
     "vuetify": "^2.2.11"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -41,16 +42,21 @@
       "prettier"
     ],
     "plugins": [
-      "prettier", "vue"
+      "prettier",
+      "vue"
     ],
     "parserOptions": {
       "parser": "babel-eslint",
-      "sourceType":"module"
+      "sourceType": "module"
     },
     "rules": {
       "no-undef": 0,
       "no-console": "warn",
-      "eslint linebreak-style": [0, "error", "windows"],
+      "eslint linebreak-style": [
+        0,
+        "error",
+        "windows"
+      ],
       "comma-dangle": "off",
       "quotes": "off"
     }

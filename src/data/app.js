@@ -15,12 +15,10 @@ export default {
     productList: [],
     searchItems: [],
     searchList: [],
+    cartItemsCount: 0,
+    cartItems: [],
     loading: true,
     drawer: null,
-    items: [
-      { title: "Home", icon: "dashboard" },
-      { title: "About", icon: "question_answer" },
-    ],
   }),
   mounted: function () {
     getAllProducts().then((res) => {
@@ -48,6 +46,21 @@ export default {
       this.productItems = this.productList.filter((item) => {
         return item.title === input;
       });
+    },
+    handleCartItems(product) {
+      const findIndex = this.cartItems.findIndex(
+        (item) => item.id === product.id
+      );
+      if (findIndex === -1) {
+        this.cartItems = this.cartItems.concat(product);
+      } else {
+        this.cartItems[findIndex].qty += 1;
+      }
+      this.cartItemsCount = this.cartItems.length;
+    },
+    removeItemFromCart(id) {
+      this.cartItems = this.cartItems.filter((cartItem) => cartItem.id !== id);
+      this.cartItemsCount = this.cartItems.length;
     },
   },
 };

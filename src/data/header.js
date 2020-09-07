@@ -3,6 +3,7 @@ export default {
   props: {
     isLoading: Boolean,
     searchItems: Array,
+    cartItemsCount: Number,
   },
   data: () => ({
     searchInput: null,

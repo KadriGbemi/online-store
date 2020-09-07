@@ -22,13 +22,22 @@
     />
     <v-tab>
       <v-badge
+        v-if="cartItemsCount > 0"
+        key="cart-items-available"
         color="green"
-        content="6"
+        :content="cartItemsCount"
       >
         <v-icon @click="displayCartDrawer">
-          mdi-open-in-new
+          fas fa-cart-arrow-down
         </v-icon>
       </v-badge>
+      <v-icon
+        v-else
+        key="cart-items-not-available"
+        @click="displayCartDrawer"
+      >
+        fas fa-shopping-cart
+      </v-icon>
     </v-tab>
   </v-app-bar>
 </template>

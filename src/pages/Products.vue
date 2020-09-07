@@ -18,24 +18,16 @@
               height="100"
               :src="product.url"
             />
-
-            <!-- <v-card-title>{{ product.title }}</v-card-title>
-
-            <v-card-text>
-              <div>{{ product.description }}</div>
-              <v-spacer />
-            </v-card-text> -->
-            <v-card-text>
-              <h2 class="title primary--text">
+            <v-card-text class="text--teal">
+              <h2 class="title teal--text">
                 {{ product.title }}
               </h2>
               {{ product.description }}
             </v-card-text>
             <v-card-actions>
               <v-spacer />
-
               <v-btn
-                color="deep-purple lighten-2"
+                color="teal"
                 text
                 @click="addToCart(product)"
               >
