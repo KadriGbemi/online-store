@@ -9,7 +9,6 @@ export default {
       this.$emit("showDrawer");
     },
     handleRemoveItemCart(id) {
-        console.log("Item", id)
       this.$emit("removeItemFromCart", id);
     },
   },
